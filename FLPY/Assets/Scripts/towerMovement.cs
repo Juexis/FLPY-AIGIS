@@ -13,8 +13,18 @@ public class towerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(-2f * Time.deltaTime, 0, 0);
+        Move();
+        TowerWrap();
+        
+    }
 
+    void Move()
+    {
+        transform.Translate(-2f * Time.deltaTime, 0, 0);
+    }
+
+    void TowerWrap()
+    {
         if (transform.position.x < -6.66)
         {
             transform.position = new Vector3(6.66f, 1.95f, 0);

@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 1124830954}
-  jumpForce: 7
+  jumpForce: 6
   flapping: 0
 --- !u!70 &1124830951
 CapsuleCollider2D:
@@ -477,7 +477,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.27, y: 0.48, z: 0}
-  m_LocalScale: {x: 0.13, y: 0.13, z: 0.13}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -669,16 +669,40 @@ PrefabInstance:
       value: tartarpipes
       objectReference: {fileID: 0}
     - target: {fileID: 3566665679840440241, guid: 4bcf801642db2f54c8ca5f3ae0f64d96, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566665679840440241, guid: 4bcf801642db2f54c8ca5f3ae0f64d96, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566665679840440241, guid: 4bcf801642db2f54c8ca5f3ae0f64d96, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566665679840440241, guid: 4bcf801642db2f54c8ca5f3ae0f64d96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.586
+      value: -4.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4198685751131671776, guid: 4bcf801642db2f54c8ca5f3ae0f64d96, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4198685751131671776, guid: 4bcf801642db2f54c8ca5f3ae0f64d96, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4198685751131671776, guid: 4bcf801642db2f54c8ca5f3ae0f64d96, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4848905787517033054, guid: 4bcf801642db2f54c8ca5f3ae0f64d96, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.47
+      value: 4.05
       objectReference: {fileID: 0}
     - target: {fileID: 4848905787517033054, guid: 4bcf801642db2f54c8ca5f3ae0f64d96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.52
+      value: 1.95
       objectReference: {fileID: 0}
     - target: {fileID: 4848905787517033054, guid: 4bcf801642db2f54c8ca5f3ae0f64d96, type: 3}
       propertyPath: m_LocalPosition.z
@@ -711,6 +735,10 @@ PrefabInstance:
     - target: {fileID: 4848905787517033054, guid: 4bcf801642db2f54c8ca5f3ae0f64d96, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848905787517033054, guid: 4bcf801642db2f54c8ca5f3ae0f64d96, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

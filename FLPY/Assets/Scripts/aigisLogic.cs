@@ -15,11 +15,16 @@ public class aigisLogic : MonoBehaviour
 
     void Update()
     {
+        Flap();
+        
+    }
 
+    void Flap()
+    {
         if (Input.GetKeyDown(KeyCode.Mouse0)) // if LMB is pressed
         {
             flapping = true;
-            body.velocity = new Vector2 (0, jumpForce);
+            body.velocity = new Vector2(0, jumpForce);
         }
         else
         {
