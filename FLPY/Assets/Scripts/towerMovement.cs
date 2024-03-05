@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class towerMovement : MonoBehaviour
 {
+    float randomY;
+    float randomX;
     // Start is called before the first frame update
     void Start()
     {
-        
+        float randomY = Random.Range(0.34f, 4.35f);
+        float randomX = Random.Range(3.75f, 13.37f);
     }
 
     // Update is called once per frame
@@ -20,14 +23,14 @@ public class towerMovement : MonoBehaviour
 
     void Move()
     {
-        transform.Translate(-2f * Time.deltaTime, 0, 0);
+        transform.Translate(-3f * Time.deltaTime, 0, 0);
     }
 
     void TowerWrap()
     {
         if (transform.position.x < -6.66)
         {
-            transform.position = new Vector3(6.66f, 1.95f, 0);
+            transform.position = new Vector3(4f + randomX, randomY, 0); // sets a random range for the y-axis of the towers
         }
     }
 }
