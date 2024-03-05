@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - player
+  - obstacles
   layers:
   - Default
   - TransparentFX
@@ -40,4 +42,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: floor
+    uniqueID: 3890629429
+    locked: 0
+  - name: towers
+    uniqueID: 2633322967
+    locked: 0
+  - name: player
+    uniqueID: 3631788725
+    locked: 0
+  - name: ui
+    uniqueID: 3453478215
     locked: 0
