@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 99791862}
   m_Layer: 0
   m_Name: checkerboard (2)
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -567,6 +567,7 @@ MonoBehaviour:
   body: {fileID: 1124830954}
   jumpForce: 6
   flapping: 0
+  gameOver: 0
 --- !u!70 &1124830951
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -946,9 +947,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1124830953}
-  - {fileID: 5019283245561820894}
   - {fileID: 1810923792}
   - {fileID: 99791864}
   - {fileID: 856952689}
+  - {fileID: 5019283245561820894}
   - {fileID: 1814782126}
   - {fileID: 56286168}

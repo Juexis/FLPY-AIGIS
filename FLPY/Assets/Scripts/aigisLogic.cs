@@ -7,6 +7,7 @@ public class aigisLogic : MonoBehaviour
     public Rigidbody2D body;
     public float jumpForce; // positive y-value
     public bool flapping;
+    public bool gameOver;
 
     void Start()
     {
@@ -15,9 +16,27 @@ public class aigisLogic : MonoBehaviour
 
     void Update()
     {
-        Flap();
-        
+        //if (!gameOver)
+        {
+            Flap();
+        }
     }
+
+    private void OnCollisionEnter2D(Collision2D otherObject)
+    {
+        string otherTag = otherObject.gameObject.tag; // creates otherTag variable (local)
+
+        Debug.Log(otherTag);
+
+        switch (otherTag) 
+        {
+            case "obstacle": // if collision with Obstacle tag, game is over
+                gameOver = true; 
+                break;
+        
+        }
+    }
+        
 
     void Flap()
     {
@@ -30,5 +49,10 @@ public class aigisLogic : MonoBehaviour
         {
             flapping = false;
         }
+    }
+
+    public bool GameOver // GETTER METHOD DOESN'T REQUIRE PARENTHESIS
+    {
+        get { return gameOver; }
     }
 }
