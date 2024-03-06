@@ -9,17 +9,17 @@ public class gameOverScreen : MonoBehaviour
 {
     public TextMeshProUGUI currentScore; // reference to Current Score Object
     public TextMeshProUGUI highScore; // reference to High Score Object
+    int HighScore;
 
-    int newHighScore;
+    private void Start()
+    {
+        HighScore = PlayerPrefs.GetInt("HighScore", 0);
+    }
     public void Setup(int score, int highscore) // method for the gameoverscreen
     {
         gameObject.SetActive(true); // makes the gameoverscreen visible
         currentScore.text = "Current Score: \n\n" + score;
-        if (newHighScore < highscore) 
-        {
-            newHighScore = highscore;
-        }
-        highScore.text = "High Score: \n\n" + newHighScore;
+        highScore.text = "High Score: \n\n" + HighScore;
         
     }
 

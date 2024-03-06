@@ -17,11 +17,12 @@ public class aigisLogic : MonoBehaviour
     void Start()
     {
         scoreDisplay.text = score.ToString();
+        highScore = PlayerPrefs.GetInt("HighScore", 0);
     }
 
     void Update()
     {
-        Debug.Log(highScore);
+
         if (!gameOver)
         {
             Flap();
@@ -76,6 +77,10 @@ public class aigisLogic : MonoBehaviour
     public void GameOver()
     {
         gameOver = true;
+        if (score > highScore)
+        {
+            PlayerPrefs.SetInt("HighScore", Score);
+        }
         GameOverScreen.Setup(score, highScore); // calling the Game Over sequence from the gameOverScreen script and assigning score value to scores
     }
 
