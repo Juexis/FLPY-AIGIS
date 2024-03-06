@@ -13,13 +13,13 @@ public class gameOverScreen : MonoBehaviour
 
     private void Start()
     {
-        HighScore = PlayerPrefs.GetInt("HighScore", 0);
+        HighScore = PlayerPrefs.GetInt("HighScore", 0); // gets the int HighScore that is stored in the PlayerPrefs
     }
     public void Setup(int score, int highscore) // method for the gameoverscreen
     {
         gameObject.SetActive(true); // makes the gameoverscreen visible
         currentScore.text = "Current Score: \n\n" + score;
-        highScore.text = "High Score: \n\n" + HighScore;
+        highScore.text = "High Score: \n\n" + HighScore; // sets the high score text to the PlayerPref one (dynamically changes the high score)
         
     }
 

@@ -460,7 +460,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 437508453}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2139185108}
+        m_TargetAssemblyTypeName: gameOverScreen, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &437508453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1176,6 +1188,7 @@ MonoBehaviour:
   body: {fileID: 1124830954}
   jumpForce: 6
   scoreDisplay: {fileID: 682492284}
+  GameOverScreen: {fileID: 2139185108}
 --- !u!70 &1124830951
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1595,6 +1608,50 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bcf801642db2f54c8ca5f3ae0f64d96, type: 3}
+--- !u!1 &1912229535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1912229537}
+  - component: {fileID: 1912229536}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1912229536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912229535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6fb1d9ba6b1af943988c48a19abad33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1912229537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912229535}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5444384, y: -3.9505794, z: -0.07581494}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2082726150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,13 +1800,14 @@ GameObject:
   - component: {fileID: 2139185105}
   - component: {fileID: 2139185107}
   - component: {fileID: 2139185106}
+  - component: {fileID: 2139185108}
   m_Layer: 5
   m_Name: Game Over
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2139185105
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1810,6 +1868,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139185104}
   m_CullTransparentMesh: 1
+--- !u!114 &2139185108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139185104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76897a17dab576247b6c7dcabe09707a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScore: {fileID: 645668693}
+  highScore: {fileID: 2082726152}
 --- !u!1001 &5019283245561820894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1881,3 +1953,4 @@ SceneRoots:
   - {fileID: 56286168}
   - {fileID: 1273288713}
   - {fileID: 365476028}
+  - {fileID: 1912229537}

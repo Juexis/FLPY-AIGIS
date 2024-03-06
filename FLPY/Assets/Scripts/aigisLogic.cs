@@ -79,7 +79,7 @@ public class aigisLogic : MonoBehaviour
         gameOver = true;
         if (score > highScore)
         {
-            PlayerPrefs.SetInt("HighScore", Score);
+            PlayerPrefs.SetInt("HighScore", Score); // sets the HighScore variable of the PlayerPrefs document if score is greater than the PlayerPref's HighScore
         }
         GameOverScreen.Setup(score, highScore); // calling the Game Over sequence from the gameOverScreen script and assigning score value to scores
     }
