@@ -1,25 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class aigisLogic : MonoBehaviour
 {
     public Rigidbody2D body;
     public float jumpForce; // positive y-value
-    public bool flapping;
-    public bool gameOver;
+    bool flapping;
+    bool gameOver;
+    int score = 0;
+    int highScore;
+    public TextMeshProUGUI scoreDisplay;
+    public gameOverScreen GameOverScreen;
 
     void Start()
     {
-        
+        scoreDisplay.text = score.ToString();
     }
 
     void Update()
     {
-        //if (!gameOver)
+        Debug.Log(highScore);
+        if (!gameOver)
         {
             Flap();
         }
+        else
+        {
+            GameOver();
+        }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D otherObject)
@@ -31,12 +42,23 @@ public class aigisLogic : MonoBehaviour
         switch (otherTag) 
         {
             case "obstacle": // if collision with Obstacle tag, game is over
-                gameOver = true; 
+                GameOver();
                 break;
         
         }
     }
-        
+
+    private void OnTriggerEnter2D(Collider2D otherTrigger)
+    {
+        switch (otherTrigger.name) 
+        {
+            case "scorefield":
+                score++;
+                scoreDisplay.text = score.ToString();
+                break;
+        }
+    }
+
 
     void Flap()
     {
@@ -51,8 +73,19 @@ public class aigisLogic : MonoBehaviour
         }
     }
 
-    public bool GameOver // GETTER METHOD DOESN'T REQUIRE PARENTHESIS
+    public void GameOver()
+    {
+        gameOver = true;
+        GameOverScreen.Setup(score, highScore); // calling the Game Over sequence from the gameOverScreen script and assigning score value to scores
+    }
+
+    public bool getGameOver // GETTER METHOD DOESN'T REQUIRE PARENTHESIS
     {
         get { return gameOver; }
+    }
+
+    public int Score
+    {
+        get { return score; }
     }
 }
