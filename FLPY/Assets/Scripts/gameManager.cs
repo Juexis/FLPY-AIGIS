@@ -6,7 +6,6 @@ public class gameManager : MonoBehaviour
 {
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
-        PlayerPrefs.DeleteAll();
+
     }
 }
